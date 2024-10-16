@@ -9,19 +9,28 @@ version = "1.0.0"
 [tasks]
 
 [dependencies]
-h5py = ">=3.11.0,<4"
-ipython = ">=8.26.0,<9"
-julia = ">=1.10.4,<2"
-jupyter = ">=1.0.0,<2"
-numba = ">=0.50.0,<1"
-numpy = "<3"
-python = "3.12"
-pytorch = ">=2.4.1,<3"
-scipy = ">=1.14.0,<2"
+h5py = "*"
+ipython = "*"
+julia = "*"
+jupyter = "*"
+numba = "*"
+numpy = "*"
+pytorch = "*"
+scipy = "*"
 
 [pypi-dependencies]
 bluesky = { path = "/home/dallan/Repos/bnl/bluesky", editable = true, extras = ["all"] }
 databroker = { path = "/home/dallan/Repos/bnl/databroker", editable = true, extras = ["all"] }
-ophyd = { path = "/home/dallan/Repos/bnl/ophyd", editable = true, extras = ["all"] }
-ophyd-async = { path = "/home/dallan/Repos/bnl/ophyd-async", editable = true, extras = ["all"] }
+# ophyd = { path = "/home/dallan/Repos/bnl/ophyd", editable = true, extras = ["all"] }
+# ophyd-async = { path = "/home/dallan/Repos/bnl/ophyd-async", editable = true, extras = ["all"] }
 tiled = { path = "/home/dallan/Repos/bnl/tiled", editable = true, extras = ["all"] }
+
+[feature.py39.dependencies]
+python = "~=3.9.0"
+
+[feature.py312.dependencies]
+python = "~=3.12.0"
+
+[environments]
+py39 = ["py39"]
+default = ["py312"]
