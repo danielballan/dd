@@ -17,12 +17,13 @@ numba = "*"
 numpy = "*"
 pytorch = "*"
 scipy = "*"
+awkward = ">=2.5,<3"
+ragged = ">=0.1.0,<0.2"
 
 [pypi-dependencies]
 bluesky = { path = "/home/dallan/Repos/bnl/bluesky", editable = true, extras = ["all"] }
 databroker = { path = "/home/dallan/Repos/bnl/databroker", editable = true, extras = ["all"] }
-# ophyd = { path = "/home/dallan/Repos/bnl/ophyd", editable = true, extras = ["all"] }
-# ophyd-async = { path = "/home/dallan/Repos/bnl/ophyd-async", editable = true, extras = ["all"] }
+ophyd = { path = "/home/dallan/Repos/bnl/ophyd", editable = true }
 tiled = { path = "/home/dallan/Repos/bnl/tiled", editable = true, extras = ["all"] }
 
 [feature.py39.dependencies]
@@ -30,6 +31,9 @@ python = "~=3.9.0"
 
 [feature.py312.dependencies]
 python = "~=3.12.0"
+
+[feature.py312.pypi-dependencies]
+ophyd-async = { path = "/home/dallan/Repos/bnl/ophyd-async", editable = true }
 
 [environments]
 py39 = ["py39"]
