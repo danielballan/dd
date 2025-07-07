@@ -21,12 +21,12 @@ awkward = "*"
 ragged = "*"
 
 [pypi-dependencies]
-bluesky = { path = "/home/dallan/Repos/bnl/bluesky", editable = true, extras = ["all"] }
-databroker = { path = "/home/dallan/Repos/bnl/databroker", editable = true, extras = ["all"] }
-bluesky-tiled-plugins = { path = "/home/dallan/Repos/bnl/databroker/bluesky-tiled-plugins", editable = true }
-# ophyd = { path = "/home/dallan/Repos/bnl/ophyd", editable = true, extras = ["all"] }
-# ophyd-async = { path = "/home/dallan/Repos/bnl/ophyd-async", editable = true, extras = ["all"] }
-tiled = { path = "/home/dallan/Repos/bnl/tiled", editable = true, extras = ["all"] }
+bluesky = { path = "../bluesky", editable = true, extras = ["all"] }
+databroker = { path = "../databroker", editable = true, extras = ["all"] }
+bluesky-tiled-plugins = { path = "../databroker/bluesky-tiled-plugins", editable = true }
+# ophyd = { path = "../ophyd", editable = true, extras = ["all"] }
+# ophyd-async = { path = "../ophyd-async", editable = true, extras = ["all"] }
+tiled = { path = "../tiled", editable = true, extras = ["all"] }
 
 [feature.py312.dependencies]
 python = "~=3.12.0"
